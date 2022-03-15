@@ -2,7 +2,7 @@ import logo from './logo.svg'
 import './App.css'
 import {
     Button,
-    Cards,
+    CardGroup,
     Navbar,
     Container,
     Nav,
@@ -11,6 +11,7 @@ import {
     Col,
     Image,
     Card,
+    Jumbotron,
 } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -88,64 +89,65 @@ function App() {
                                 </Card.Body>
                             </Card>
                         </Row>
+
                         <Row>
                             <Col>
-                                <Card style={{ width: '18rem' }}>
-                                    <Card.Img
-                                        variant="top"
-                                        src="https://picsum.photos/id/300/320/200"
-                                    />
-                                    <Card.Body>
-                                        <Card.Title>Card Title</Card.Title>
-                                        <Card.Text>
-                                            Some quick example text to build on
-                                            the card title and make up the bulk
-                                            of the card's content.
-                                        </Card.Text>
-                                        <Button variant="primary">
-                                            Go somewhere
-                                        </Button>
-                                    </Card.Body>
-                                </Card>
+                                <CardGroup>
+                                    <Card className="text-center">
+                                        <Card.Img
+                                            variant="top"
+                                            src="https://picsum.photos/id/302/320/200"
+                                        />
+                                        <Card.Body>
+                                            <Card.Title>Card title</Card.Title>
+                                            <Card.Text>
+                                                This is a wider card with
+                                                supporting text below as a
+                                            </Card.Text>
+                                            <Button variant="primary">
+                                                Go somewhere
+                                            </Button>
+                                        </Card.Body>
+                                    </Card>
+                                    <Card className="text-center">
+                                        <Card.Img
+                                            variant="top"
+                                            src="https://picsum.photos/id/301/320/200"
+                                        />
+                                        <Card.Body>
+                                            <Card.Title>Card title</Card.Title>
+                                            <Card.Text>
+                                                This card has supporting text
+                                                below as a natural
+                                            </Card.Text>
+                                            <Button variant="primary">
+                                                Go somewhere
+                                            </Button>
+                                        </Card.Body>
+                                    </Card>
+                                    <Card className="text-center">
+                                        <Card.Img
+                                            variant="top"
+                                            src="https://picsum.photos/id/300/320/200"
+                                        />
+                                        <Card.Body>
+                                            <Card.Title>Card title</Card.Title>
+                                            <Card.Text>
+                                                This is a wider card with
+                                                supporting text below as a
+                                            </Card.Text>
+                                            <Button variant="primary">
+                                                Go somewhere
+                                            </Button>
+                                        </Card.Body>
+                                    </Card>
+                                </CardGroup>
                             </Col>
-                            <Col>
-                                <Card style={{ width: '18rem' }}>
-                                    <Card.Img
-                                        variant="top"
-                                        src="https://picsum.photos/id/301/320/200"
-                                    />
-                                    <Card.Body>
-                                        <Card.Title>Card Title</Card.Title>
-                                        <Card.Text>
-                                            Some quick example text to build on
-                                            the card title and make up the bulk
-                                            of the card's content.
-                                        </Card.Text>
-                                        <Button variant="primary">
-                                            Go somewhere
-                                        </Button>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                            <Col>
-                                <Card style={{ width: '18rem' }}>
-                                    <Card.Img
-                                        variant="top"
-                                        src="https://picsum.photos/id/302/320/200"
-                                    />
-                                    <Card.Body>
-                                        <Card.Title>Card Title</Card.Title>
-                                        <Card.Text>
-                                            Some quick example text to build on
-                                            the card title and make up the bulk
-                                            of the card's content.
-                                        </Card.Text>
-                                        <Button variant="primary">
-                                            Go somewhere
-                                        </Button>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
+                        </Row>
+                        <Row>
+                            <Button variant="primary" size="md">
+                                Block level button
+                            </Button>
                         </Row>
                     </Container>
                 </main>
