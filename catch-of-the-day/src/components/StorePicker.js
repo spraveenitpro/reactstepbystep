@@ -1,3 +1,8 @@
+/**
+ * <p>This function returns a form that allows the user to enter a store name and submit it to the
+ * store-selector component.</p>
+ * @returns A form with a submit button.
+ */
 import React from 'react'
 
 function StorePicker() {
