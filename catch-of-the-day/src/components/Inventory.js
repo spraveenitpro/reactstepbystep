@@ -5,7 +5,7 @@ import AddFishForm from './AddFishForm'
  * This function returns a div with the className "inventory"
  * @returns A div with the text "Inventory!!"
  */
-function Inventory({ addFish }) {
+function Inventory({ addFish, loadSampleFishes }) {
     return (
         <>
             <div className="inventory">
