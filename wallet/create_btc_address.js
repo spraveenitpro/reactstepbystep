@@ -1,13 +1,7 @@
 'use strict'; 
 module.exports = function create_btc_address(){ 
-
 const  bitcoin =require('bitcoinjs-lib');
-
-
 const  { ECPairFactory }  = require('ecpair'); 
-
-
-
 const NETWORK = bitcoin.networks.mainnet;
 
 
@@ -22,6 +16,5 @@ const { address } = bitcoin.payments.p2pkh({
 const privateKey = keyPair.toWIF();
 console.log(address+" "+privateKey);
 
-//console.log (tinysecp)
-}
 
+}
