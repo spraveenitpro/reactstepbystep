@@ -1,0 +1,19 @@
+{
+  "feedback": [
+    {
+      "id": 1,
+      "rating": 10,
+      "text": " This is an awesome product, check it out!"
+    },
+    {
+      "id": 2,
+      "rating": 4,
+      "text": " This is an awesome product2, check it out!"
+    },
+    {
+      "id": 3,
+      "rating": 3,
+      "text": " This is an awesome product3, check it out!"
+    }
+  ]
+}
