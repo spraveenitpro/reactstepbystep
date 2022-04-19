@@ -14,6 +14,11 @@
       "id": 3,
       "rating": 3,
       "text": " This is an awesome product3, check it out!"
+    },
+    {
+      "text": "THis rating is just a 3",
+      "rating": 3,
+      "id": 5
     }
   ]
 }
