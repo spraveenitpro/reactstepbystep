@@ -20,7 +20,6 @@ function App() {
         const oldFishes = fishes
         oldFishes[`fish${Date.now()}`] = fish
         setFishes(oldFishes)
-        console.log(fishes)
     }
 
     function loadSampleFishes() {
