@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import FollowersList from '../FollowersList'
 
@@ -10,14 +10,22 @@ const MockFollowersList = () => {
     )
 }
 
-test('Should render list of followers', async () => {
-    render(<MockFollowersList />)
-    const followerDivElement = await screen.findByTestId('follower-item-0')
-    expect(followerDivElement).toBeInTheDocument()
-})
+describe('FollowersList', () => {
+    beforeEach(() => {
+        jest.mock('../../../__mocks__/axios')
+    })
 
-test('Should render 5 followers', async () => {
-    render(<MockFollowersList />)
-    const followerDivElement = await screen.findAllByTestId(/follower-item/i)
-    expect(followerDivElement.length).toBe(5)
+    it('should fetch and render input element', async () => {
+        render(<MockFollowersList />)
+        const followerDivElement = await screen.findByTestId(`follower-item-0`)
+        expect(followerDivElement).toBeInTheDocument()
+    })
+
+    it('should fetch and render input element:', async () => {
+        render(<MockFollowersList />)
+
+        const followerDivElement = await screen.findByTestId(`follower-item-0`)
+        screen.debug()
+        expect(followerDivElement).toBeInTheDocument()
+    })
 })
