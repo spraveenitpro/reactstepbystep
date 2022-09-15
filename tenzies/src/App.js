@@ -1,24 +1,26 @@
-import Die from './components/Die';
-import './App.css';
+import Die from './components/Die'
+import './App.css'
+import { useState } from 'react'
 
 function App() {
-  return (
-   <main>
-    <div className="dice-container">
-        <Die id={1} />
-        <Die id={2} />
-        <Die id={3} />
-        <Die id={4} />
-        <Die id={5} />
-        <Die id={6} />
-        <Die id={7} />
-        <Die id={8} />
-        <Die id={9} />
-        <Die id={10} />
+    const [dice, setDice] = useState(allNewDice())
+    function allNewDice() {
+        const newDice = []
+        for (var i = 0; i < 10; i++) {
+            newDice.push(Math.ceil(Math.random() * 6))
+        }
+        //console.log(newDice)
+        return newDice
+    }
 
-    </div>
-   </main>
-  );
+    const diceElements = dice.map((die, index) => (
+        <Die value={die} key={index} />
+    ))
+    return (
+        <main>
+            <div className="dice-container">{diceElements}</div>
+        </main>
+    )
 }
 
-export default App;
+export default App

@@ -1,9 +1,9 @@
 
 
-export default function Die({id}) {
+export default function Die({value}) {
     return (
         <div className="die-face">
-            <h2 className="die-num">{id}</h2>
+            <h2 className="die-num">{value}</h2>
         </div>
     )
 }
