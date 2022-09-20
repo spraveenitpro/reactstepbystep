@@ -1,8 +1,10 @@
+export default function Die({ value, isHeld, id, holdDice }) {
+    const styles = {
+        backgroundColor: isHeld ? '#59E391' : 'white',
+    }
 
-
-export default function Die({value}) {
     return (
-        <div className="die-face">
+        <div className="die-face" style={styles} onClick={holdDice}>
             <h2 className="die-num">{value}</h2>
         </div>
     )
